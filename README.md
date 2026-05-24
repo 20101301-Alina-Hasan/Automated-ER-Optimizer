@@ -7,6 +7,7 @@ By enabling symptom self-reporting, our system leverages a scalable PySpark-base
 
 ### The Dataset
 The project utilizes the Symptoms-to-Diseases Medical dataset, a synthetic medical diagnosis dataset designed to support the development and evaluation of machine learning models for symptom-based disease prediction. 
+* **Dataset Source:** Available on Kaggle via the [Symptom-to-Disease Medical Dataset URL](https://www.kaggle.com/datasets/harrachimustapha/symptom-to-disease-medical-dataset/data).
 * It is derived from the DDXPlus dataset.
 * Because the data is synthetic, it does not contain real patient identities.
 * The study focuses exclusively on the three interconnected subsets essential for our triage classification pipeline: `patients`, `patient_evidences`, and `diseases`.
@@ -44,3 +45,7 @@ In a clinical triage setting, the severity of a misclassification is not uniform
 
 The model successfully prioritizes patient safety by rarely under-triaging, i.e., misclassifying a critical RED patient as a non-urgent GREEN patient. While the matrix indicates a higher rate of over-triaging, this asymmetric error distribution is highly desirable in emergency medicine. It proves that the PCA-Optimized Random Forest Classifier has safely mapped the most severe clinical patterns, effectively minimizing the risk of life-threatening clinical oversight.
 
+### License & Academic Integrity
+This repository is developed strictly for research and educational purposes as part of the Big Data Analytics curriculum at BRAC University. 
+
+* **Dataset License:** The underlying dataset used in this project is sourced under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license. Accordingly, this software and its findings are intended purely for non-commercial, academic exploration.
