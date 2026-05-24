@@ -17,7 +17,9 @@ The schema of our database is centered around the `patients` table. This central
 
 ![Schema](/attachments/schema.png)
 
-The main challenge in joining `patients_df` with `patient_evidences_df` is the "exploding join"; because a patient exhibits multiple symptoms, a standard join duplicates their demographic data across many rows. To resolve this, we use PySpark to group all symptoms into a single array for each patient. There are exactly 1,292,579 records in the finalized master dataset.
+The main challenge in joining `patients_df` with `patient_evidences_df` is the "exploding join"; because a patient exhibits multiple symptoms, a standard join duplicates their demographic data across many rows. To resolve this, we use PySpark to group all symptoms into a single array for each patient and then apply a standard join. We then join the resulting table to the `diseases` table via the shared `disease_id` key. This gives us our master dataset.
+
+There are exactly 1,292,579 records in the finalized master dataset.
 
 ### Data Preprocessing & Feature Engineering
 * **Column Pruning:** Strict column pruning was applied across DataFrames to prevent data leakage, removing any information a triage nurse does not possess when a patient first arrives.
