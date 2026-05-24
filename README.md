@@ -44,5 +44,3 @@ In a clinical triage setting, the severity of a misclassification is not uniform
 
 The model successfully prioritizes patient safety by rarely under-triaging, i.e., misclassifying a critical RED patient as a non-urgent GREEN patient. While the matrix indicates a higher rate of over-triaging, this asymmetric error distribution is highly desirable in emergency medicine. It proves that the PCA-Optimized Random Forest Classifier has safely mapped the most severe clinical patterns, effectively minimizing the risk of life-threatening clinical oversight.
 
-### Authors & Affiliations
-This research was conducted by Alina Hasan, Md Refazul Islam Refat, Rafiur Rahman Shoishab, Mithila Farjana, and Dr. Md. Golam Rabiul Alam. They are affiliated with the School of Data and Sciences at BRAC University in Dhaka, Bangladesh.
